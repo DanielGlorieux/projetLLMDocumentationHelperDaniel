@@ -659,7 +659,11 @@ except ImportError:
     INDEX_NAME = "test1"  # Default fallback
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, origins=[
+    "http://localhost:3000",  # Development
+    "https://projetllmdocumentationhelperdaniel.netlify.app"  # Production
+])
+
 
 # Global variables for caching
 llm_instance = None

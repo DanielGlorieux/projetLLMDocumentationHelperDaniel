@@ -661,7 +661,7 @@ except ImportError:
 app = Flask(__name__)
 CORS(app, origins=[
     "http://localhost:3000",  # Development
-    "https://projetllmdocumentationhelperdaniel.netlify.app"  # Production
+    "danielglorieuxsearchai.netlify.app"  # Production
 ])
 
 

@@ -706,7 +706,7 @@ def get_gemini_embeddings():
     if embeddings_instance is None:
         api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
-            raise ValueError("GOOGLE_API_KEY not found in environment variables")
+            raise ValueError("GOOGLE_API_KEY not found in environment variables...")
 
         embeddings_instance = GoogleGenerativeAIEmbeddings(
             model="models/text-embedding-004",  # Updated to match streamlit version
